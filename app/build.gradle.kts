@@ -33,6 +33,16 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    //修改控制台log等级，这样才能看到println输出
+    testOptions {
+        unitTests.all {
+            it.testLogging {
+                showStandardStreams = true
+                //events("passed", "skipped", "failed", "standardOut", "standardError")
+                //exceptionFormat = org.gradle.api.tasks.testing.logging.TestExceptionFormat.FULL
+            }
+        }
+    }
 }
 
 dependencies {

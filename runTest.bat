@@ -1,0 +1,1 @@
+./gradlew :app:testDebugUnitTest --tests "*两数相加*" --rerun-tasks
